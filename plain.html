@@ -6,9 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <div></div>
+    </div>
+
     <script>
-        document.getElementById("app").innerText="Hello World";
+        document.getElementById("app").getElementsByTagName("div")[0].innerText="Hello World";
     </script>
 </body>
 </html>

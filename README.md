@@ -105,3 +105,8 @@ Native Dom Event와 Custom Event 모두 조작이 가능하다.
 ## Event로 Data 주고 받기
 - v-on & $emit(EVENT_NAME[, ...args])을 이용해 자식 -> 부모로의 데이터 교환이 가능
 - Custom Event를 정의해서 활용할 수 있음
+  
+## Dynamic Component
+- 한 위치에 사용할 Component가 확실하게 정해지지 않은 경우
+  - 예) 페이지 탭
+- <component>를 사용해서 사용할 Component를 직접 정의할 수 있음

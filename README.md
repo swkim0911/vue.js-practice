@@ -39,19 +39,19 @@
 - 변수의 이전과 이후 상태를 비교해서 필요한 로직을 수행할 수 있다.
   
 ## 주요 문법
-### Template
+## Template
 - Vue.js만의 특수한 문법으로 틀만 짜면, 그 틀은 실제 보여지는 화면을 위한 HTML로 Compile된다.
   - Template이 Virtual DOM Render Function으로 컴파일
   - Reactivity System을 통해 최소한으로 다시 표시해야하는 Component들을 파악
   
-### Template Syntax: Interpolation
+### Interpolation
 - 이질적인 것을 (호환되게) 집어 넣는 것
   - Component의 Data를 View에 집어넣어주는 것으로 이해
 - 대표적인 종류들
   - Text: 가장 기본적인 것 (Mustache Binding: {{}})
   - Raw HTML, Attributes: ID, Class, Style 같은 속성들 또한 Dynamic하게 적용 가능
 
-### Template Syntax: Directive
+### Directive
 - v- 접두어를 가진 특수한 attributes
 - Interpoliation만으로는 힘든 각종 효과들을 쉽게 적용할 수 있도록 한 것
   - 조건문, 반복문, (Vue Instance 내에서 인식하는) 이벤트들 
@@ -96,3 +96,8 @@ Native Dom Event와 Custom Event 모두 조작이 가능하다.
   - 웹페이지에서 사용하게 될 Componet들을 먼저 정의 & 등록
   - 웹페이지에서 Component 사용할 곳을 지정
   - Root Instance를 생성
+
+## Props
+- 사용자 정의 Attribute로, 부모에서 자식 Component로 특정 값을 넘길 때 사용
+- Component에서 사용할 Prop을 정의해줘야함
+- 동일한 Component들을 여러 개의 Instance로 만들어야할 때 유용

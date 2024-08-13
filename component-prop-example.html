@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+      <div v-for="post in posts" :key="post.idx">
+        <blog-item v-bind:post="post"></blog-item>
+      </div>
+  </div>
+  <script>
+    Vue.component("blog-item", {
+      template:`<div><h3>{{post.title}}</h3>
+        <p>{{post.description}}</p></div>`,
+        props:["post"] // root 인스턴스에서 데이터를 받아옴
+    })
+    let vm = new Vue({
+      el: "#app",
+      data:{
+        posts: [
+          {
+            idx: 1,
+            title: "Blog Post 1",
+            description: "Lorem Insum 1"
+          },
+          {
+            idx: 2,
+            title: "Blog Post 2",
+            description: "Lorem Insum 2"
+          },
+          {
+            idx: 3,
+            title: "Blog Post 3",
+            description: "Lorem Insum 3"
+          }
+
+        ]
+      }
+    })
+  </script>
+</body>
+</html>

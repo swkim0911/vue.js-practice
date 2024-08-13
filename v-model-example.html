@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!--input text에 들어온 값을 vue 인스턴스의 data에 binding-->
+    <input type="text" name="example" id="example" v-model.lazy="inputValue">
+    <select name="select-example" id="select-example" v-model="selectValue">
+      <option value="Hello">Hello</option>
+      <option value="World">World</option>
+    </select>
+    <p>{{inputValue}}</p>
+  </div>
+
+  <script>
+    let vm = new Vue({
+      el:"#app",
+      data:{
+        inputValue: "",
+        selectValue: null
+      }
+    })
+  </script>
+</body>
+</html>

@@ -75,3 +75,12 @@
   
 ### v-if: 조건문
 - v-if / v-else-if / v-else
+
+### v-model: (Form Input) Data Binding
+Input DOM에 Data Binding을 설정하는 것이다.
+- 대부분의 Input Type에서 가능하다.
+- Modifier을 이용해서 Input 값들을 다듬을 수 있다.
+  - .number: String을 Numeric 값으로 Typecast
+  - .trim: 앞뒤 Whitespace들을 정리
+  - .lazy: Input DOM에서 포커스가 나갔을 때 값을 Update
+    - 연속된 이벤트 발생을 방지

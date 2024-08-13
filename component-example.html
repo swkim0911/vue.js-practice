@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+  </div>
+  
+  <script>
+    Vue.component("button-counter", {
+      template: `<button v-on:click="buttonClicked">You Clicked me {{counter}} times!</button>`,
+      // json이 아닌 function인 이유는 json을 하면 component들이 고유한 json 객체를 갖기 때문에. data 인스턴스가 개별 복사본을 가질 수 있도록 function 사용
+      data: function(){ 
+        return {
+          counter:0
+        }
+      },
+      methods: {
+        buttonClicked(){
+          this.counter++;
+        }
+      }
+    })
+    let vm =  new Vue({
+      el: "#app",
+
+    });
+  </script>
+</body>
+</html>

@@ -1,19 +1,19 @@
 # vue.js로 시작하는 SPA 개발 강의 내용
 
-## 2.1 Hello World로 만나는 Vue
+## Hello World로 만나는 Vue
 - 유지보수 측면에서 vue가 편함
 - plain js VS jquery VS vue.js를 했을 때 속도 측면에서 jquery가 가장 느리고 vue.js는 외부에서 vue.js 파일을 외부에서 가져옴에도 불구하고 plain js와 속도가 비슷하다.
 
-## 3.1 Vue Instance
+## Vue Instance
 - Vue Instance는 MVVM 패턴의 View Model에 해당
   - View(DOM)와 Model(Plain Javascript Object) 사이의 통신을 가능하게 해주는 역할
 - Vue Instance는 Binder를 가지고 있어, View와 Model을 서로 맞춰줌.(동기화)
 - Vue의 구성요소들은 Model의 변화에 반응적
 - Virtual Instance
 
-## 3.2 Vue Lifecycle
+## Vue Lifecycle
 
-## 3.3 Instance Properties
+## Instance Properties
 - el, data 같은 것들
 - Vue Instance가 만들어질 때, Option Object(Properties)를 받을 수 있다.
 - Instance의 특성을 지정할 수 있게 해준다.
@@ -88,3 +88,11 @@ Input DOM에 Data Binding을 설정하는 것이다.
 ### v-on: Event Handling
 Native Dom Event와 Custom Event 모두 조작이 가능하다.
 - 특히, Modifier를 이용해서 특정 이벤트만 골라서 적용할 수 있다.
+
+## Components
+- "Components are **reusable** Vue instances with a name"
+- 역시 Vue 인스턴스이기 때문에 Instance Option들을 똑같이 받는다.
+- 사용순서
+  - 웹페이지에서 사용하게 될 Componet들을 먼저 정의 & 등록
+  - 웹페이지에서 Component 사용할 곳을 지정
+  - Root Instance를 생성

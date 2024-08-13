@@ -1,4 +1,4 @@
-# vue.js로 시작하는 SPA 개발 강의 내용
+# vue.js로 시작하는 SPA 개발 강의 정리
 
 ## Hello World로 만나는 Vue
 - 유지보수 측면에서 vue가 편함
@@ -39,7 +39,7 @@
 - 변수의 이전과 이후 상태를 비교해서 필요한 로직을 수행할 수 있다.
   
 ## 주요 문법
-## Template
+## Template (틀)
 - Vue.js만의 특수한 문법으로 틀만 짜면, 그 틀은 실제 보여지는 화면을 위한 HTML로 Compile된다.
   - Template이 Virtual DOM Render Function으로 컴파일
   - Reactivity System을 통해 최소한으로 다시 표시해야하는 Component들을 파악
@@ -101,3 +101,7 @@ Native Dom Event와 Custom Event 모두 조작이 가능하다.
 - 사용자 정의 Attribute로, 부모에서 자식 Component로 특정 값을 넘길 때 사용
 - Component에서 사용할 Prop을 정의해줘야함
 - 동일한 Component들을 여러 개의 Instance로 만들어야할 때 유용
+
+## Event로 Data 주고 받기
+- v-on & $emit(EVENT_NAME[, ...args])을 이용해 자식 -> 부모로의 데이터 교환이 가능
+- Custom Event를 정의해서 활용할 수 있음

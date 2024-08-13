@@ -84,3 +84,7 @@ Input DOM에 Data Binding을 설정하는 것이다.
   - .trim: 앞뒤 Whitespace들을 정리
   - .lazy: Input DOM에서 포커스가 나갔을 때 값을 Update
     - 연속된 이벤트 발생을 방지
+
+### v-on: Event Handling
+Native Dom Event와 Custom Event 모두 조작이 가능하다.
+- 특히, Modifier를 이용해서 특정 이벤트만 골라서 적용할 수 있다.

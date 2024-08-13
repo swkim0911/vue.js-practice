@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="text" name="example" id="example"
+          v-model="inputValue"
+          v-on:keydown.enter="enterKeyPressed">
+    <p>{{inputValue}}</p>
+  </div>
+  <script>
+    let vm = new Vue({
+      el:"#app",
+      data:{
+        inputValue: ""
+      },
+      methods:{
+        enterKeyPressed(){
+          alert("입력이 완료되었습니다.");
+        }
+      }
+    })
+  </script>
+</body>
+</html>

@@ -55,7 +55,7 @@
 - v- 접두어를 가진 특수한 attributes
 - Interpoliation만으로는 힘든 각종 효과들을 쉽게 적용할 수 있도록 한 것
   - 조건문, 반복문, (Vue Instance 내에서 인식하는) 이벤트들 
-- 인자를 받을 수 도 있음.
+- 인자를 받을 수도 있음.
   - ex) v-bind:href="url"
   - href 를 인자로 받아서 url 이라는 변수를 href에 Binding
   

@@ -1,11 +1,25 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
+import axios from 'axios';
 
-const count = ref(0)
+const title = ref("")
+const content = ref("")
+
+const write = function(){
+  axios.get("http://localhost:8080")
+}
+
 </script>
-<style></style>
+
 <template>
-  <p>안녕하세요</p>
-  <button @click="count += 1">버튼을 눌러주세요</button>
-  <p>Count: {{ count }}</p>
+  <div>
+  <el-input v-model="title" placeholder="제목을 입력해주세요" />
+  </div>
+  <div class="mt-2">
+    <el-input v-model="content" type="textarea" rows="15"/>
+  </div>
+  <div class="mt-2">
+  <el-button type="primary" @click="write()">글 작성완료</el-button>
+  </div>
+
 </template>

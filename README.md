@@ -1,4 +1,4 @@
-# vue.js로 시작하는 SPA 개발 강의 정리
+# vue.js로 시작하는 SPA 개발 강의 정리 (vue 2)
 
 ## Hello World로 만나는 Vue
 - 유지보수 측면에서 vue가 편함
